@@ -1,0 +1,14 @@
+.nav-link {
+  border-bottom: 2px solid transparent;
+  text-transform: uppercase;
+}
+
+.btn-link {
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.active {
+  color: #0070f3;
+  border-bottom-color: #0070f3;
+}
