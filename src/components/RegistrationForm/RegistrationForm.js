@@ -3,16 +3,19 @@ import { memo } from "react"
 import { useForm } from 'react-hook-form';
 import { Input, Button } from '../ui';
 
+import { useAuth } from '../../hook/useAuthState';
+
 import { registerAsync } from "../../api/auth";
 
 const RegistrationForm = ({customSubmit}) =>{
     const { register, handleSubmit } = useForm();
-
+    const { registration } = useAuth();
     const onSubmit = async({email,password}) => {
-        const response = registerAsync(email,password);
-        console.log(response)
-        if(response && response.success){
-            console.log(response)
+        const response = await registerAsync(email,password);
+        //console.log(response)
+        if(response.success){
+            //console.log(response)
+            registration(response.data.token)
         }
         else{
 

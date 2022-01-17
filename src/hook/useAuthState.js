@@ -37,14 +37,20 @@ export const useAuthState = () => {
     navigate(LOGIN_PATH);
   };
 
-  const register = () => {
+  const registration = (token) => {
     // TODO: register user
+    console.log(token)
+    if(token){
+      localStorage.setItem(TOKEN_KEY, token);
+      setAuthStatus({ isLoggedIn: true });
+      navigate(HOME_PATH);
+    }
   };
 
   return {
     auth: authStatus,
     logOut,
     logIn,
-    register,
+    registration,
   };
 };

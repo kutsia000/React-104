@@ -1,7 +1,7 @@
 import RegistrationForm from "../../components/RegistrationForm/RegistrationForm";
 import { Card } from '../../components/Card/Card';
 
-import { useState, useMemo, useCallback } from 'react';
+import { useCallback } from 'react';
 
 const Registration = (props) =>{
 

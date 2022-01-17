@@ -14,6 +14,7 @@ const LoginForm = ({ customSubmit }) => {
 
   const onSubmit = async ({ email, password }) => {
     const response = await loginAsync(email, password);
+    //console.log(response)
     if (response.success) {
       logIn(response.data.token);
     } else {

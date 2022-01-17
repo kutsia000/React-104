@@ -35,6 +35,7 @@ export const registerAsync = async (email, password) => {
       email,
       password,
     });
+    //console.log(response)
     result.data = response.data;
   } catch (error) {
     result.success = false;
