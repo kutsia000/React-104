@@ -13,7 +13,8 @@ const Login = (props) => {
 
   // const numbers = useMemo(() => [1, 2, 3, 4, 5], []);
 
-  console.log('LOGIN RENDERING...');
+  //console.log('LOGIN RENDERING...');
+  //console.log(process.env.REACT_APP_API_ENDPOINT)
 
   const onSubmit = useCallback((data) => {
     console.log('onSubmit', data);

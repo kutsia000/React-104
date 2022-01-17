@@ -4,8 +4,9 @@ import Navigation from './components/Navigation';
 import Home from './pages/home';
 import Contact from './pages/contact';
 import Login from './pages/login';
+import FAQ from './pages/FAQ';
 
-import { CONTACT_PATH, HOME_PATH, LOGIN_PATH, REGISTER_PATH } from './constants/routes';
+import { CONTACT_PATH, HOME_PATH, LOGIN_PATH, REGISTER_PATH, FAQ_PATH } from './constants/routes';
 import Registration from './pages/register/Registration';
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
           <Route path={CONTACT_PATH} element={<Contact />} />
           <Route path={LOGIN_PATH} element={<Login />} />
           <Route path={REGISTER_PATH} element={<Registration />}></Route>
+          <Route path={FAQ_PATH} element={<FAQ></FAQ>}></Route>
         </Routes>
       </div>
     </div>

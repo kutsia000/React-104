@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom';
 
-import { HOME_PATH, CONTACT_PATH, LOGIN_PATH } from '../../constants/routes';
+import { HOME_PATH, CONTACT_PATH, LOGIN_PATH, FAQ_PATH } from '../../constants/routes';
 import { useAuth } from '../../hook/useAuthState';
 
 import './Navigation.css';
@@ -23,6 +23,10 @@ function Navigation() {
 
       <NavLink to={CONTACT_PATH} className="nav-link">
         Contact
+      </NavLink>
+
+      <NavLink to={FAQ_PATH} className="nav-link">
+        FAQ
       </NavLink>
 
       {!auth.isLoggedIn && (

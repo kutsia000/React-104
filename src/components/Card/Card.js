@@ -1,9 +1,10 @@
 import { useState } from 'react';
-export const Card = ({ children, className, ...props }) => {
+export const Card = ({ children, className, headerText, ...props }) => {
   const [value, setValue] = useState(false);
 
   return (
     <div className={`card shadow ${className}`} {...props}>
+      {headerText&&<h2>{headerText}</h2>}
       {value && children}
 
       <div className="mt-2 mb-2">
